@@ -1,7 +1,7 @@
-package Interface;
+package Interface.FirstFrameLayout;
 
-import javax.annotation.Resource;
-import javax.annotation.Resources;
+import Interface.ResizerImage;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -29,23 +29,26 @@ public class TitolFrame extends JPanel {
 
     private void layoutCreator() {
        this.setLayout(bl);
-       resizeImage();
-       imageIcon.setIcon(icon);
-       battle.setHorizontalAlignment(JLabel.CENTER);
-       ship.setHorizontalAlignment(JLabel.CENTER);
-       imageIcon.setHorizontalAlignment(JLabel.CENTER);
-       battle.setFont(new Font("Serif",Font.BOLD,20));
-       ship.setFont(new Font("Serif",Font.LAYOUT_LEFT_TO_RIGHT,20));
+       icon = ResizerImage.resizeImage(icon,512,400);
+       addLayout();
+       resizeFont();
        this.add(imageIcon,BorderLayout.CENTER);
        this.add(battle,BorderLayout.NORTH);
        this.add(ship,BorderLayout.SOUTH);
 
         }
 
-    private void resizeImage(){
-        Image image = icon.getImage();
-        image = image.getScaledInstance(192,150, Image.SCALE_SMOOTH);
-        icon = new ImageIcon(image);
+
+    private void resizeFont(){
+        battle.setFont(new Font("Serif",Font.BOLD,40));
+        ship.setFont(new Font("Serif",Font.LAYOUT_LEFT_TO_RIGHT,40));
+    }
+
+    private void addLayout(){
+        imageIcon.setIcon(icon);
+        battle.setHorizontalAlignment(JLabel.CENTER);
+        ship.setHorizontalAlignment(JLabel.CENTER);
+        imageIcon.setHorizontalAlignment(JLabel.CENTER);
     }
 
 }
