@@ -1,0 +1,20 @@
+<application>
+  <component name="libraryTable">
+    <library name="k5nCal-0.9.7">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/Desktop/Librerie java/k5nCal-0.9.7.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/Desktop/Librerie java/k5nCal-0.9.7.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="mysql-connector-java-5.1.40-bin">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/Desktop/Librerie java/mysql-connector-java-5.1.40-bin.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+  </component>
+</application>
